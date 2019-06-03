@@ -12,11 +12,11 @@ class AuthService {
 
   user;
 
-  login(email: string, password: string) {
-    return this.http.post();
-  }
-
-  signup(name: string, email: string, password: string) {
-    return this.http.post();
-  }
+  // login(email: string, password: string) {
+  //   return this.http.post();
+  // }
+  //
+  // signup(name: string, email: string, password: string) {
+  //   return this.http.post();
+  // }
 }

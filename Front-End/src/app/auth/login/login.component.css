@@ -1,0 +1,17 @@
+.login-container{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.login-container > *{
+  margin: 1rem;
+  width: 100%;
+}
+
+.buttons-container{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}

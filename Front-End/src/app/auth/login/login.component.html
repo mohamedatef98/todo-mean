@@ -1,0 +1,23 @@
+<form class="box centered shadowed login-container" #f="ngForm" (ngSubmit)="log(f)">
+  <h1 class="text-center">Login</h1>
+  <mat-form-field>
+    <input matInput type="text" placeholder="Email" name="email" required email ngModel/>
+    <mat-error *ngIf="f.controls.email && f.controls.email.hasError('required'); else emailRequired">{{"Required"}}</mat-error>
+    <ng-template #emailRequired>
+      <mat-error *ngIf="f.controls.email && f.controls.email.hasError('required')">{{"Invalid Email"}}</mat-error>
+    </ng-template>
+  </mat-form-field>
+
+  <mat-form-field>
+    <input matInput type="password" placeholder="Password" name="password" required ngModel minlength="8"/>
+    <mat-error *ngIf="f.controls.password && f.controls.password.hasError('required'); else passwordMinLength">{{"Required"}}</mat-error>
+    <ng-template #passwordMinLength>
+      <mat-error *ngIf="f.controls.password && f.controls.password.hasError('minlength')">{{"Must be atleast 8 characters long"}}</mat-error>
+    </ng-template>
+  </mat-form-field>
+
+  <div class="buttons-container">
+    <button type="submit" mat-raised-button color="primary" [disabled]="f.invalid">Login</button>
+    <button type="button" mat-raised-button color="accent">Signup</button>
+  </div>
+</form>
