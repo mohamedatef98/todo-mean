@@ -1,0 +1,11 @@
+.navbar-container{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 0 1rem;
+}
+
+.links *{
+  margin: 0 0.5rem;
+  cursor: pointer;
+}
