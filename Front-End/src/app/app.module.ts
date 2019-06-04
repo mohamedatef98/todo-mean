@@ -12,6 +12,7 @@ import {LoginComponent} from "./auth/login/login.component";
 import {FormsModule} from "@angular/forms";
 import {SignupComponent} from "./auth/signup/signup.component";
 import {SameValidatorDirective} from "./directives/same-validator.directive";
+import {HttpClientModule} from "@angular/common/http";
 
 @NgModule({
   declarations: [
@@ -28,7 +29,8 @@ import {SameValidatorDirective} from "./directives/same-validator.directive";
     BrowserAnimationsModule,
     MaterialModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
