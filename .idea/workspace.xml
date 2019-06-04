@@ -3,7 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="894019ad-68dc-41bc-87be-ca67a99b3ab3" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Front-End/src/app/app.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Front-End/src/app/app.module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Back-End/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/Back-End/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Back-End/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/Back-End/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Front-End/src/app/todos/todos.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Front-End/src/app/todos/todos.service.ts" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -15,25 +17,7 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Front-End/.gitignore">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/Front-End/src/app/todos/todos.service.ts">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="288">
-              <caret line="12" column="2" lean-forward="true" selection-start-line="12" selection-start-column="2" selection-end-line="12" selection-end-column="2" />
-              <folding>
-                <element signature="e#0#41#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -76,8 +60,8 @@
         <option value="$PROJECT_DIR$/Front-End/src/app/layout/navbar/navbar.component.html" />
         <option value="$PROJECT_DIR$/Front-End/src/app/auth/login/login.component.html" />
         <option value="$PROJECT_DIR$/Front-End/src/app/auth/signup/signup.component.html" />
-        <option value="$PROJECT_DIR$/Front-End/src/app/todos/todos.service.ts" />
         <option value="$PROJECT_DIR$/Front-End/src/app/app.module.ts" />
+        <option value="$PROJECT_DIR$/Front-End/src/app/todos/todos.service.ts" />
       </list>
     </option>
   </component>
@@ -87,7 +71,7 @@
     <other-services-enabled>true</other-services-enabled>
     <auto-save>true</auto-save>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds" extendedState="7">
     <option name="x" value="51" />
     <option name="y" value="84" />
     <option name="width" value="1400" />
@@ -110,32 +94,6 @@
               <item name="PayMe Task" type="b2602c69:ProjectViewProjectNode" />
               <item name="PayMe Task" type="462c0819:PsiDirectoryNode" />
               <item name="Back-End" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="PayMe Task" type="b2602c69:ProjectViewProjectNode" />
-              <item name="PayMe Task" type="462c0819:PsiDirectoryNode" />
-              <item name="Front-End" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="PayMe Task" type="b2602c69:ProjectViewProjectNode" />
-              <item name="PayMe Task" type="462c0819:PsiDirectoryNode" />
-              <item name="Front-End" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="PayMe Task" type="b2602c69:ProjectViewProjectNode" />
-              <item name="PayMe Task" type="462c0819:PsiDirectoryNode" />
-              <item name="Front-End" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="PayMe Task" type="b2602c69:ProjectViewProjectNode" />
-              <item name="PayMe Task" type="462c0819:PsiDirectoryNode" />
-              <item name="Front-End" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="todos" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -183,7 +141,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1559571347077</updated>
-      <workItem from="1559571351354" duration="14340000" />
+      <workItem from="1559571351354" duration="15700000" />
     </task>
     <task id="LOCAL-00001" summary="Layout components">
       <created>1559603485179</created>
@@ -203,18 +161,17 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="14340000" />
+    <option name="totallyTimeSpent" value="15700000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1066" extended-state="6" />
-    <editor active="true" />
+    <frame x="-8" y="-8" width="1936" height="1066" extended-state="7" />
     <layout>
       <window_info id="Favorites" side_tool="true" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.17913593" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.17913593" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="TypeScript" />
       <window_info anchor="bottom" id="Docker" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" weight="0.3296582" />
+      <window_info active="true" anchor="bottom" id="Version Control" visible="true" weight="0.3296582" />
       <window_info anchor="bottom" id="GraphQL" />
       <window_info anchor="bottom" id="Terminal" weight="0.3296582" />
       <window_info anchor="bottom" id="Event Log" side_tool="true" />
@@ -523,7 +480,7 @@
     <entry file="file://$PROJECT_DIR$/Front-End/src/app/todos/todos.service.ts">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="288">
-          <caret line="12" column="2" lean-forward="true" selection-start-line="12" selection-start-column="2" selection-end-line="12" selection-end-column="2" />
+          <caret line="12" column="21" selection-start-line="12" selection-start-column="21" selection-end-line="12" selection-end-column="21" />
           <folding>
             <element signature="e#0#41#0" expanded="true" />
           </folding>
