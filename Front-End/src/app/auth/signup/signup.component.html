@@ -1,0 +1,37 @@
+<form class="box centered shadowed signup-container" #f="ngForm" (ngSubmit)=" log(f)">
+  <h1 class="text-center">Signup</h1>
+
+  <mat-form-field>
+    <input matInput type="text" placeholder="Username" name="name" required minlength="5" ngModel aria-label="Username"/>
+    <mat-error *ngIf="f.controls.name && f.controls.name.hasError('required'); else nameMinLength">{{"Required"}}</mat-error>
+    <ng-template #nameMinLength>
+      <mat-error *ngIf="f.controls.name && f.controls.name.hasError('minlength')">{{"Short Username"}}</mat-error>
+    </ng-template>
+  </mat-form-field>
+
+  <mat-form-field>
+    <input matInput type="text" placeholder="Email" name="email" required email ngModel aria-label="Email"/>
+    <mat-error *ngIf="f.controls.email && f.controls.email.hasError('required'); else emailRequired">{{"Required"}}</mat-error>
+    <ng-template #emailRequired>
+      <mat-error *ngIf="f.controls.email && f.controls.email.hasError('required')">{{"Invalid Email"}}</mat-error>
+    </ng-template>
+  </mat-form-field>
+
+  <mat-form-field>
+  <input matInput type="password" placeholder="Password" name="password" required ngModel minlength="8" #password aria-label="Password"/>
+  <mat-error *ngIf="f.controls.password && f.controls.password.hasError('required'); else passwordMinLength">{{"Required"}}</mat-error>
+  <ng-template #passwordMinLength>
+    <mat-error *ngIf="f.controls.password && f.controls.password.hasError('minlength')">{{"Must be atleast 8 characters long"}}</mat-error>
+  </ng-template>
+</mat-form-field>
+
+  <mat-form-field>
+    <input matInput type="password" placeholder="Confirm Password" name="passwordConfirm" required ngModel minlength="8" [appSameValidator]="password.value" aria-label="Confirm Password"/>
+    <mat-error *ngIf="f.controls.passwordConfirm && f.controls.passwordConfirm.hasError('required'); else passwordConfirmNotSame">{{"Required"}}</mat-error>
+    <ng-template #passwordConfirmNotSame>
+      <mat-error *ngIf="f.controls.passwordConfirm && f.controls.passwordConfirm.hasError('notsame')">{{"The Password and confirmation are not same"}}</mat-error>
+    </ng-template>
+  </mat-form-field>
+
+  <button type="submit" mat-raised-button color="primary" [disabled]="f.invalid">Signup</button>
+</form>
