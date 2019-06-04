@@ -10,6 +10,8 @@ import {MainComponent} from "./layout/main/main.component";
 import {HomeComponent} from "./layout/home/home.component";
 import {LoginComponent} from "./auth/login/login.component";
 import {FormsModule} from "@angular/forms";
+import {SignupComponent} from "./auth/signup/signup.component";
+import {SameValidatorDirective} from "./directives/same-validator.directive";
 
 @NgModule({
   declarations: [
@@ -17,7 +19,9 @@ import {FormsModule} from "@angular/forms";
     NavbarComponent,
     MainComponent,
     HomeComponent,
-    LoginComponent
+    LoginComponent,
+    SignupComponent,
+    SameValidatorDirective
   ],
   imports: [
     BrowserModule,
