@@ -1,9 +1,22 @@
-var express = require('express');
-var router = express.Router();
+const express = require('express');
+const router = express.Router();
 
-/* GET home page. */
-router.get('/', function(req, res, next) {
-  res.render('index', { title: 'Express' });
-});
+const checkAuth = require('../middlewares/check-auth');
+const getUser = require('../middlewares/get-user');
+
+const dispatch = require('../lib/ControllerDispatcher');
+const TodosController = require('../controllers/TodosController');
+
+router.use(checkAuth);
+router.use(getUser);
+
+
+router.get('/', dispatch(TodosController, 'index'));
+
+router.post('/', dispatch(TodosController, 'create'));
+
+router.delete('/:id', dispatch(TodosController, 'destroy'));
+
+router.put('/:id', dispatch(TodosController, 'update'));
 
 module.exports = router;
