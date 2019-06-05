@@ -3,7 +3,7 @@ class TodosController{
     //View All todos for user
     index(req, res){
         res.status(200).send({
-            todos: user
+            todos: 'todos'
         })
     }
 
