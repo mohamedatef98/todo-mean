@@ -16,7 +16,7 @@ export class NotificaionsService{
   pushNotification(type: messageType, text: string){
     this.getPNotify()[type]({
       text,
-      delay: 1000
+      delay: 2000
     })
   }
 
