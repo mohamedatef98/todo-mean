@@ -31,7 +31,7 @@ app.use(express.static(distDir));
 
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
-app.use(express.static(path.join(__dirname, 'public')));
+app.use(express.static(path.join(__dirname, 'dist')));
 
 (async function run() {
     console.log(process.env)
@@ -39,8 +39,10 @@ app.use(express.static(path.join(__dirname, 'public')));
     app.use('/api/', usersRouter);
     app.use('/api/todos', todosRouter);
 
-    app.use(function(req, res) {
-        res.sendFile('./dist/index.html');
+
+    // Catch all other routes and return the index file
+    app.get('*', (req, res) => {
+    res.sendFile(path.join(__dirname, './dist/index.html'));
     });
 
     app.listen(process.env.PORT, () => console.log(`Example app listening on port ${process.env.PORT}!`))
