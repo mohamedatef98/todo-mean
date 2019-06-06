@@ -30,3 +30,11 @@
   width: 2rem;
   height: 2rem;
 }
+
+
+/*On small screens the add button shrinks*/
+@media(max-width: 400px){
+  .create-todo__form-field{
+    width: 75%;
+  }
+}

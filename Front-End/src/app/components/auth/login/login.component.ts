@@ -15,9 +15,9 @@ export class LoginComponent{
     this.authService.login(f.value).subscribe(
       res => {
         this.router.navigate(['/todos']);
-        this.notificationsService.pushNotification('success', 'Welcome')
+        this.notificationsService.pushSuccess('Welcome')
       },
-      err => console.error(err)
+      err => this.notificationsService.pushError(err.error.message, "Cannot Login")
     )
   }
 }

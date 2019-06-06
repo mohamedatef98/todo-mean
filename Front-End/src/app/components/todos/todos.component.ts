@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {TodosService} from "./todos.service";
 import {Todo} from "./todo.model";
+import { NotificaionsService } from 'src/app/services/notifications.service';
 
 @Component({
   selector: 'app-todos',
@@ -11,7 +12,7 @@ export class TodosComponent implements OnInit {
 
   todos: Array<Todo>;
 
-  constructor(private todosService: TodosService) { }
+  constructor(private todosService: TodosService, private notificationsService: NotificaionsService) { }
 
   ngOnInit() {
     this.getTodos();
@@ -24,7 +25,7 @@ export class TodosComponent implements OnInit {
   getTodos(){
     this.todosService.getTodos().subscribe(
       todos => this.todos = todos,
-      err => console.error(err)
+      err => this.notificationsService.pushError(err.error.message, "Can't Fetch your todos")
     );
   }
 

@@ -3,6 +3,10 @@
   <component name="ChangeListManager">
     <list default="true" id="894019ad-68dc-41bc-87be-ca67a99b3ab3" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/Front-End/src/app/components/auth/login/login.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Front-End/src/app/components/auth/login/login.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Front-End/src/app/components/auth/signup/signup.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Front-End/src/app/components/auth/signup/signup.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Front-End/src/app/components/todos/create/todos-create.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Front-End/src/app/components/todos/create/todos-create.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Front-End/src/app/components/todos/view/item/todos-item.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Front-End/src/app/components/todos/view/item/todos-item.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Front-End/src/app/services/notifications.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Front-End/src/app/services/notifications.service.ts" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -14,12 +18,12 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Front-End/src/app/services/notifications.service.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="360">
-              <caret line="12" lean-forward="true" selection-start-line="12" selection-end-line="12" />
+            <state relative-caret-position="666">
+              <caret line="34" selection-start-line="34" selection-end-line="34" />
             </state>
           </provider>
         </entry>
@@ -27,8 +31,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Front-End/src/app/components/auth/login/login.component.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="457">
-              <caret line="17" column="64" selection-start-line="17" selection-start-column="64" selection-end-line="17" selection-end-column="64" />
+            <state relative-caret-position="390">
+              <caret line="17" column="56" selection-start-line="17" selection-start-column="56" selection-end-line="17" selection-end-column="56" />
               <folding>
                 <element signature="e#0#40#0" expanded="true" />
               </folding>
@@ -128,7 +132,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -193,6 +196,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -243,6 +247,7 @@
       <option name="presentableId" value="Default" />
       <updated>1559571347077</updated>
       <workItem from="1559571351354" duration="64885000" />
+      <workItem from="1559830065114" duration="488000" />
     </task>
     <task id="LOCAL-00001" summary="Layout components">
       <created>1559603485179</created>
@@ -262,7 +267,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="64885000" />
+    <option name="totallyTimeSpent" value="65373000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1066" extended-state="6" />
@@ -313,6 +318,20 @@
                 </list>
               </option>
             </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="RECENT_FILTERS">
+      <map>
+        <entry key="Branch">
+          <value>
+            <list />
+          </value>
+        </entry>
+        <entry key="User">
+          <value>
+            <list />
           </value>
         </entry>
       </map>
@@ -671,20 +690,20 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Front-End/src/app/components/auth/login/login.component.ts">
+    <entry file="file://$PROJECT_DIR$/Front-End/src/app/services/notifications.service.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="457">
-          <caret line="17" column="64" selection-start-line="17" selection-start-column="64" selection-end-line="17" selection-end-column="64" />
-          <folding>
-            <element signature="e#0#40#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="666">
+          <caret line="34" selection-start-line="34" selection-end-line="34" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Front-End/src/app/services/notifications.service.ts">
+    <entry file="file://$PROJECT_DIR$/Front-End/src/app/components/auth/login/login.component.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="12" lean-forward="true" selection-start-line="12" selection-end-line="12" />
+        <state relative-caret-position="390">
+          <caret line="17" column="56" selection-start-line="17" selection-start-column="56" selection-end-line="17" selection-end-column="56" />
+          <folding>
+            <element signature="e#0#40#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

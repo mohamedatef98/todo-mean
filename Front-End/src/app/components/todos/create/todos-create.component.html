@@ -1,6 +1,13 @@
-<form #f="ngForm" class="create-todo__container">
+<form #f="ngForm" class="create-todo__container" (ngSubmit)="handleClick(f)">
   <mat-form-field class="create-todo__form-field" [floatLabel]="'never'" appearance="outline">
-    <input class="create-todo__input" matInput [placeholder]="randomTodo" name="description" ngModel required maxlength="100"/>
+    <input class="create-todo__input" 
+    matInput 
+    [placeholder]="randomTodo" 
+    (blur)="removeErrors(f)"
+    name="description" 
+    ngModel 
+    required 
+    maxlength="100"/>
   </mat-form-field>
   <div class="create-todo__button pointer" (click)="handleClick(f)">
     <mat-spinner *ngIf="status == 'loading'" diameter="32"></mat-spinner>

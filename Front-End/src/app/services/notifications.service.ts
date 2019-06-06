@@ -19,4 +19,16 @@ export class NotificaionsService{
       delay: 1000
     })
   }
+
+  pushSuccess(text: string){
+    this.pushNotification('success', text);
+  }
+
+  pushError(...text: string[]){
+    this.pushNotification('error', `Something went wrong, ${text.join(', ')}`);
+  }
+
+  pushInfo(text: string){
+    this.pushNotification('info', text);
+  }
 }

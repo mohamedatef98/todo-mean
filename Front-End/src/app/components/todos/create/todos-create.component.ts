@@ -1,6 +1,7 @@
 import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
 import {TodosService} from "../todos.service";
 import {NgForm} from "@angular/forms";
+import { NotificaionsService } from 'src/app/services/notifications.service';
 
 @Component({
   selector: 'app-create',
@@ -9,7 +10,7 @@ import {NgForm} from "@angular/forms";
 })
 export class TodosCreateComponent implements OnInit {
 
-  constructor(private todosService: TodosService){}
+  constructor(private todosService: TodosService, private notificationsService: NotificaionsService){}
 
   status : 'none' | 'loading' | 'done' = 'none';
 
@@ -57,13 +58,19 @@ export class TodosCreateComponent implements OnInit {
           this.status = 'done';
           this.setRandomTodo();
           f.resetForm();
+          this.notificationsService.pushSuccess('Todo Added')
           setTimeout(()=> {
             this.status = 'none';
           }, 1000)
         },
-        (err)=> console.error(err)
+        (err)=> this.notificationsService.pushError(err.error.message, "Todo wasn't added")
       );
     }
+  }
+
+  removeErrors(f: NgForm){
+    if(!f.value.description)
+      setTimeout(()=>f.resetForm(), 1000)
   }
 
 }
