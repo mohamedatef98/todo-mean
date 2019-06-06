@@ -1,4 +1,6 @@
 import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
+import {TodosService} from "../todos.service";
+import {NgForm} from "@angular/forms";
 
 @Component({
   selector: 'app-create',
@@ -7,7 +9,7 @@ import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
 })
 export class TodosCreateComponent implements OnInit {
 
-  todo = "";
+  constructor(private todosService: TodosService){}
 
   status : 'none' | 'loading' | 'done' = 'none';
 
@@ -30,7 +32,6 @@ export class TodosCreateComponent implements OnInit {
     "Enlighten the world",
     "Look Awesome"
   ];
-  constructor() { }
 
   ngOnInit() {
     this.setRandomTodo();
@@ -47,20 +48,22 @@ export class TodosCreateComponent implements OnInit {
       this.randomTodo = this.getRandomTodo();
   }
 
-  onChange(e){
-    this.setRandomTodo();
-    this.todo = String(e.value ? e.value : '');
-  }
-
-  handleClick(){
-    if(this.status === 'none')
+  handleClick(f: NgForm){
+    if(this.status === 'none' && f.valid){
       this.status = 'loading';
-      setTimeout(()=>{
-        this.status = 'done';
-        setTimeout(()=> {
-          this.status = 'none';
-        }, 1000)
-      }, 1000)
+      this.todosService.createTodo(f.value).subscribe(
+        ()=> {
+          this.todosService.todosSubject.next();
+          this.status = 'done';
+          this.setRandomTodo();
+          f.resetForm();
+          setTimeout(()=> {
+            this.status = 'none';
+          }, 1000)
+        },
+        (err)=> console.error(err)
+      );
+    }
   }
 
 }
