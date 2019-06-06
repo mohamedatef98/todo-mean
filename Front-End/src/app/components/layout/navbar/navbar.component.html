@@ -1,9 +1,11 @@
 <mat-toolbar color="primary" class="navbar-container">
-  <span class="brand">Third Line</span>
+  <span class="brand pointer" [routerLink]="noToken() ? '/' : '/todos'">Todos</span>
   <div class="links">
-    <span *ngIf="noToken(); else logoutRef" routerLink="/login">Login</span>
-    <ng-template #logoutRef>
-      <span (click)="logout()">Logout</span>
-    </ng-template>
+    <span class="pointer">
+      <span *ngIf="noToken(); else logoutRef" routerLink="/login">Login</span>
+      <ng-template #logoutRef>
+        <span (click)="logout()">Logout</span>
+      </ng-template>
+    </span>
   </div>
 </mat-toolbar>

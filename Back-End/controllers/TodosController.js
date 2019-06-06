@@ -7,15 +7,13 @@ class TodosController{
     async index(req, res){
         try{
             //Find all the todos in the user.todos array of _ids
-            const todos =  await  Todo.find( {_id: { $in: req.user.todos} } );
-            res.status(200).send({
-                todos
-            })
+            const todos =  await  Todo.find( {_id: { $in: req.user.todos} }, {}, { sort: { create_at: 1 } } );
+            res.status(200).send(todos)
         }
         catch(e){
             res.status(500).send({
                 error: true,
-                message: "Error Fetching Todos" + e.message
+                message: "Error Fetching Todos, " + e.message
             })
         }
     }
