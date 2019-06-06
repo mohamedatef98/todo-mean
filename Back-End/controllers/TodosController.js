@@ -12,14 +12,18 @@ class TodosController{
 
     }
 
-
     //Delete single todo
     destroy(req, res){
 
     }
 
-    //edit single todo
-    update(req, res){
+    //edit single description todo
+    updateDescription(req, res){
+
+    }
+
+    //edit single done state todo
+    updateDone(req, res){
 
     }
 }

@@ -17,6 +17,8 @@ router.post('/', dispatch(TodosController, 'create'));
 
 router.delete('/:id', dispatch(TodosController, 'destroy'));
 
-router.put('/:id', dispatch(TodosController, 'update'));
+router.put('/:id/description', dispatch(TodosController, 'updateDescription'));
+
+router.put('/:id/toggleDone', dispatch(TodosController, 'updateDone'));
 
 module.exports = router;
