@@ -1,6 +1,8 @@
 import {Component, Input, OnInit} from '@angular/core';
 import {Todo} from "../../todo.model";
 import {TodosService} from "../../todos.service";
+import {MatDialog} from "@angular/material";
+import {EditTodoDialogComponent} from "../edit/edit-todo-dialog.component";
 
 @Component({
   selector: 'app-item',
@@ -11,7 +13,7 @@ export class TodosItemComponent implements OnInit {
 
   @Input('todo') todo: Todo;
 
-  constructor(private todosService: TodosService) { }
+  constructor(private todosService: TodosService, private dialog: MatDialog) { }
 
   ngOnInit() {
   }
@@ -27,6 +29,20 @@ export class TodosItemComponent implements OnInit {
     this.todosService.deleteTodo(this.todo).subscribe(
       () =>  this.todosService.todosSubject.next(),
       err => console.warn(err)
+    )
+  }
+
+  editTodo(){
+    const dialogRef = this.dialog.open(EditTodoDialogComponent,
+      {data: {todo: Object.assign({}, this.todo)}, width: '400px'});
+    dialogRef.afterClosed().subscribe(
+      (res) => {
+        if(res)
+          this.todosService.updateTodo(res).subscribe(
+            ()=>this.todosService.todosSubject.next(),
+            err=> console.error(err)
+          )
+      },
     )
   }
 

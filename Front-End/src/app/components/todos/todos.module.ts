@@ -8,13 +8,15 @@ import {TodosRoutingModule} from "./todos-routing.module";
 import {CommonModule} from "@angular/common";
 import {HttpClientModule} from "@angular/common/http";
 import {FormsModule} from "@angular/forms";
+import {EditTodoDialogComponent} from "./view/edit/edit-todo-dialog.component";
 
 @NgModule({
   declarations: [
     TodosComponent,
     TodosCreateComponent,
     TodosViewComponent,
-    TodosItemComponent
+    TodosItemComponent,
+    EditTodoDialogComponent
   ],
   imports: [
     MaterialModule,
@@ -22,6 +24,9 @@ import {FormsModule} from "@angular/forms";
     CommonModule,
     HttpClientModule,
     FormsModule
+  ],
+  entryComponents: [
+    EditTodoDialogComponent
   ]
 })
 export class TodosModule{
