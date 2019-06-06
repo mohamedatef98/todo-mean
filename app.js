@@ -39,7 +39,7 @@ app.use(express.static(path.join(__dirname, 'public')));
     app.use('/api/', usersRouter);
     app.use('/api/todos', todosRouter);
 
-    app.get('*', function(req, res) {
+    app.get('/*', function(req, res) {
         res.sendFile('./dist/index.html');
     });
 
