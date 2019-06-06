@@ -34,6 +34,7 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
 (async function run() {
+    console.log(process.env)
     await mongoose.connect(process.env.MONGODB_URI, {useNewUrlParser: true, useFindAndModify: false});
     app.use('/', usersRouter);
     app.use('/todos', todosRouter);
@@ -41,6 +42,8 @@ app.use(express.static(path.join(__dirname, 'public')));
     app.get('*', function(req, res) {
         res.sendFile('./dist/index.html');
     });
+
+    app.listen(process.env.PORT, () => console.log(`Example app listening on port ${port}!`))
 })();
 
 module.exports = app;
