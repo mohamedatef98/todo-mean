@@ -5,14 +5,15 @@ import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MaterialModule} from "./material.module";
 import {AppRoutingModule} from "./app-routing.module";
-import {NavbarComponent} from "./layout/navbar/navbar.component";
-import {MainComponent} from "./layout/main/main.component";
-import {HomeComponent} from "./layout/home/home.component";
-import {LoginComponent} from "./auth/login/login.component";
+import {NavbarComponent} from "./components/layout/navbar/navbar.component";
+import {MainComponent} from "./components/layout/main/main.component";
+import {HomeComponent} from "./components/layout/home/home.component";
+import {LoginComponent} from "./components/auth/login/login.component";
 import {FormsModule} from "@angular/forms";
-import {SignupComponent} from "./auth/signup/signup.component";
+import {SignupComponent} from "./components/auth/signup/signup.component";
 import {SameValidatorDirective} from "./directives/same-validator.directive";
 import {HttpClientModule} from "@angular/common/http";
+import {TodosModule} from "./components/todos/todos.module";
 
 @NgModule({
   declarations: [
@@ -22,7 +23,7 @@ import {HttpClientModule} from "@angular/common/http";
     HomeComponent,
     LoginComponent,
     SignupComponent,
-    SameValidatorDirective
+    SameValidatorDirective,
   ],
   imports: [
     BrowserModule,
@@ -30,7 +31,8 @@ import {HttpClientModule} from "@angular/common/http";
     MaterialModule,
     AppRoutingModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    TodosModule
   ],
   providers: [],
   bootstrap: [AppComponent]
