@@ -14,6 +14,7 @@ import {SignupComponent} from "./components/auth/signup/signup.component";
 import {SameValidatorDirective} from "./directives/same-validator.directive";
 import {HttpClientModule} from "@angular/common/http";
 import {TodosModule} from "./components/todos/todos.module";
+import { WrongPageComponent } from './components/layout/wrong-page/wrong-page.component';
 
 @NgModule({
   declarations: [
@@ -24,6 +25,7 @@ import {TodosModule} from "./components/todos/todos.module";
     LoginComponent,
     SignupComponent,
     SameValidatorDirective,
+    WrongPageComponent
   ],
   imports: [
     BrowserModule,
