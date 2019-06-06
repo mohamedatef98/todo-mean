@@ -20,19 +20,19 @@ export class TodosService {
     this.http.get(`${api}/todos`, this.httpOptions);
   }
   
-  deleteTodo({id}){
-    this.http.delete(`${api}/todos/${id}`, this.httpOptions);
+  deleteTodo({_id}){
+    this.http.delete(`${api}/todos/${_id}`, this.httpOptions);
   }
 
   createTodo({description}){
     this.http.post(`${api}/todos`, {description}, this.httpOptions);
   }
 
-  updateTodo({id, description}){
-    this.http.put(`${api}/todos/${id}/description`, {description}, this.httpOptions);
+  updateTodo({_id, description}){
+    this.http.put(`${api}/todos/${_id}/description`, {description}, this.httpOptions);
   }
 
-  toggleDoneTodo({id, prevDone}){
-    this.http.put(`${api}/todos/${id}/toggleDone`,{done: !prevDone}, this.httpOptions);
+  toggleDoneTodo({_id}){
+    this.http.put(`${api}/todos/${_id}/toggleDone`, {}, this.httpOptions);
   }
 }
