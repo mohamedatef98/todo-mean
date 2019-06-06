@@ -7,7 +7,8 @@ import {
   MatInputModule,
   MatProgressSpinnerModule,
   MatTableModule,
-  MatCheckboxModule
+  MatCheckboxModule,
+  MatDialogModule
 } from "@angular/material";
 
 
@@ -20,7 +21,8 @@ import {
     MatInputModule,
     MatProgressSpinnerModule,
     MatTableModule,
-    MatCheckboxModule
+    MatCheckboxModule,
+    MatDialogModule
   ]
 })
 export class MaterialModule{

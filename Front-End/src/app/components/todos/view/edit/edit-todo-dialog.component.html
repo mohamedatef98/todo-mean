@@ -1,0 +1,13 @@
+<h1 mat-dialog-title>Edit Todo</h1>
+<form #f="ngForm">
+  <div mat-dialog-content>
+    <mat-form-field>
+      <input matInput name="description" [(ngModel)]="data.todo.description" required maxlength="100">
+      <mat-error *ngIf="f.controls.description && f.controls.description.hasError('required')">{{'Required'}}</mat-error>
+    </mat-form-field>
+  </div>
+  <div class="action-buttons" mat-dialog-actions>
+    <button type="button" mat-button [disabled]="f.invalid" [mat-dialog-close]="data.todo">Ok</button>
+    <button type="button" mat-button (click)="close()">Cancel</button>
+  </div>
+</form>
