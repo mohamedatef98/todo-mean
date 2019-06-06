@@ -10,7 +10,7 @@ const routes: Routes = [
   {path: '', component: HomeComponent},
   {path: 'login', component: LoginComponent},
   {path: 'signup', component: SignupComponent},
-  {path: 'todos', canActivate: [LoggedInGuard], loadChildren: () => import('./components/todos/todos.module').then(m => m.TodosModule)},
+  {path: 'todos', canActivate: [LoggedInGuard], loadChildren: './components/todos/todos.module#TodosModule'},
   {path: '**', component: WrongPageComponent}
 ];
 
