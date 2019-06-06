@@ -37,6 +37,10 @@ app.use(express.static(path.join(__dirname, 'public')));
     await mongoose.connect(process.env.process.env.MONGODB_URI, {useNewUrlParser: true, useFindAndModify: false});
     app.use('/', usersRouter);
     app.use('/todos', todosRouter);
+
+    app.get('*', function(req, res) {
+        res.sendFile('./dist/index.html');
+    });
 })();
 
 module.exports = app;
