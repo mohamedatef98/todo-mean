@@ -2,6 +2,9 @@ import {Injectable} from "@angular/core";
 import {HttpClient, HttpHeaders} from "@angular/common/http";
 import {api} from "../../globals";
 import {TokenService} from "../../services/token.service";
+import {Subject} from "rxjs";
+import {map} from 'rxjs/operators'
+import {Todo} from "./todo.model";
 
 @Injectable({
   providedIn: 'root'
@@ -16,23 +19,25 @@ export class TodosService {
 
   constructor(private http: HttpClient, private tokenService: TokenService){}
 
+  todosSubject = new Subject();
+
   getTodos(){
-    this.http.get(`${api}/todos`, this.httpOptions);
+    return this.http.get<Array<Todo>>(`${api}/todos`, this.httpOptions);
   }
   
   deleteTodo({_id}){
-    this.http.delete(`${api}/todos/${_id}`, this.httpOptions);
+    return this.http.delete(`${api}/todos/${_id}`, this.httpOptions);
   }
 
   createTodo({description}){
-    this.http.post(`${api}/todos`, {description}, this.httpOptions);
+    return this.http.post(`${api}/todos`, {description}, this.httpOptions);
   }
 
   updateTodo({_id, description}){
-    this.http.put(`${api}/todos/${_id}/description`, {description}, this.httpOptions);
+    return this.http.put(`${api}/todos/${_id}/description`, {description}, this.httpOptions);
   }
 
   toggleDoneTodo({_id}){
-    this.http.put(`${api}/todos/${_id}/toggleDone`, {}, this.httpOptions);
+    return this.http.put(`${api}/todos/${_id}/toggleDone`, {}, this.httpOptions);
   }
 }

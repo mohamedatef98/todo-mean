@@ -1,0 +1,4 @@
+<div class="todo-item__container">
+  <h4 class="todo-item__description"><mat-icon (click)="deleteTodo()" class="pointer">cancel</mat-icon>{{todo.description}}</h4>
+  <mat-checkbox [checked]="todo.done" (change)="toggleTodo()"></mat-checkbox>
+</div>
