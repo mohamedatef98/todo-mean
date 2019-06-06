@@ -5,7 +5,9 @@ import {
   MatButtonModule,
   MatFormFieldModule,
   MatInputModule,
-  MatProgressSpinnerModule
+  MatProgressSpinnerModule,
+  MatTableModule,
+  MatCheckboxModule
 } from "@angular/material";
 
 
@@ -16,7 +18,9 @@ import {
     MatButtonModule,
     MatFormFieldModule,
     MatInputModule,
-    MatProgressSpinnerModule
+    MatProgressSpinnerModule,
+    MatTableModule,
+    MatCheckboxModule
   ]
 })
 export class MaterialModule{
