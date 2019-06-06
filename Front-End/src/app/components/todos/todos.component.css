@@ -1,0 +1,12 @@
+.todos-container{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 700px;
+  margin: 5rem auto;
+}
+
+.todos-container > app-create{
+  width: 80%;
+  margin: 1rem;
+}
