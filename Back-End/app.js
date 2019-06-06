@@ -29,7 +29,7 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
 (async function run() {
-    await mongoose.connect(process.env.DB_URI, {useNewUrlParser: true, useFindAndModify: false});
+    await mongoose.connect(process.env.process.env.MONGODB_URI, {useNewUrlParser: true, useFindAndModify: false});
     app.use('/', usersRouter);
     app.use('/todos', todosRouter);
 })();
