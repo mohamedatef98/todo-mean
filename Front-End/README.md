@@ -1,9 +1,3 @@
-# Todos App
------------
-
-* Todos App using Angular 8, nodejs, Mongodb (MEAN) and material ui.
-* JWT user auth.
-
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.3.9.
 
