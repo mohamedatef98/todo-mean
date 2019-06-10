@@ -6,7 +6,7 @@
   "dependencies": {},
   "devDependencies": {},
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
 	"build": "cd Front-End && npm install && ng build --prod && mv * ./dist ../Back-End/dist && cd ../Back-End && npm install"
   },
   "repository": {
